@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+    LinuxDesktop:
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+            args:
+                Username: ronald
+        image: docker-linux-desktop:latest
+        container_name: docker-linux-desktop
+        #environment:
+        ports:
+        - "2200:22"
+        - "3389:3389"
