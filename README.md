@@ -3,10 +3,13 @@ Docker linux desktop is a way to easily deploy a linux desktop environment into 
 
 ## How to run
 With docker-compose:
-`docker-compose up`
 
-Run directly with docker:
-`docker run -p 3389:3389 ronaldbaltus/docker-linux-desktop`
+Openbox: `docker-compose up LinuxDesktopOpenbox`
+Xfce: `docker-compose up LinuxDesktopXfce`
+Mate: `docker-compose up LinuxDesktopMate`
+
+Run directly with docker (default is openbox):
+`docker run -p 3389:3389 -e Username=myuser ronaldbaltus/docker-linux-desktop`
 
 ## Username and password
-The current username and password are `someuser` and `someuser`. You are free to modify this through the build args.
+The current username and password are `someuser` and `someuser`. You can use the Username environment variable to change the username,the password will match the username.
